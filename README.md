@@ -35,7 +35,7 @@ def base_function
   # ...
 end
 
-Encapsulate.run callback: base_function, with: [Encapsulators.user_interaction_before_return, Encapsulators.exception_handling]
+Encapsulate.run callback: base_function, with: [Encapsulators.method(:user_interaction_before_return), Encapsulators.method(:exception_handling)]
 ```
 
 ## Feedback
