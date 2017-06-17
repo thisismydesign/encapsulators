@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["thisismydesign"]
   spec.email         = ["thisismydesign@users.noreply.github.com"]
 
-  spec.summary       = ""
-  spec.homepage      = ""
+  spec.summary       = "Collection of practical functions to be used with the 'encapsulate' gem."
+  spec.homepage      = "https://github.com/thisismydesign/encapsulators"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})

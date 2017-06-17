@@ -1,6 +1,6 @@
 # Encapsulators
 
-WIP
+#### Collection of practical functions to be used with the 'encapsulate' gem.
 
 | Branch | Status |
 | ------ | ------ |
@@ -25,7 +25,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+See the [encapsulate](https://github.com/thisismydesign/encapsulate) gem.
+
+```ruby
+require 'encapsulate'
+require 'encapsulators'
+
+def base_function
+  # ...
+end
+
+Encapsulate.run callback: base_function, with: [Encapsulators.user_interaction_before_return, Encapsulators.exception_handling]
+```
 
 ## Feedback
 
