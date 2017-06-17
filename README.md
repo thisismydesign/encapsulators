@@ -31,7 +31,7 @@ See the [encapsulate](https://github.com/thisismydesign/encapsulate) gem.
 require 'encapsulate'
 require 'encapsulators'
 
-def base_function
+base_function = lambda do
   # ...
 end
 
