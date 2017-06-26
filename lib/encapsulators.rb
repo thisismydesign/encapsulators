@@ -25,12 +25,9 @@ module Encapsulators
     logger.debug("Method '#{callback}' finished")
   end
 
-  module EncapsulatorReferences
-
-    # Upon include this will create class level methods as well
-    def self.included(base)
-      base.extend(self)
-    end
+  # Should remain between encapsulators and `include EasyLogging`, cannot be moved to separate file
+  module References
+    include ReflectionUtils::CreateClassMethodsUponInclude
 
     (Encapsulators.methods - Object.methods).each do |encapsulator|
       define_method(encapsulator) do
@@ -41,7 +38,6 @@ module Encapsulators
         Encapsulators.method(encapsulator)
       end
     end
-
   end
 
   include EasyLogging
