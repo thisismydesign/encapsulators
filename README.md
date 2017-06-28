@@ -31,11 +31,13 @@ See the [encapsulate](https://github.com/thisismydesign/encapsulate) gem.
 require 'encapsulate'
 require 'encapsulators'
 
+include Encapsulators::References
+
 base_function = lambda do
   # ...
 end
 
-Encapsulate.run callback: base_function, with: [Encapsulators.method(:user_interaction_before_return), Encapsulators.method(:exception_handling)]
+Encapsulate.run callback: base_function, with: [user_interaction_before_return, exception_handling]
 ```
 
 ## Feedback
